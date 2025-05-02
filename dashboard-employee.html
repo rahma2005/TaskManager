@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard - TaskFlow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/navigation.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h3>TaskFlow</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a href="dashboard-employee.html">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="my-tasks.html">
+                        <i class="fas fa-tasks"></i>
+                        <span>My Tasks</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="calendar.html">
+                        <i class="fas fa-calendar"></i>
+                        <span>Calendar</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button type="button" class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="ms-auto">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle d-flex align-items-center" type="button" id="userDropdown" data-bs-toggle="dropdown">
+                                <img src="images/profile.jpg" class="rounded-circle me-2" alt="Profile">
+                                <span id="userName">Loading...</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                                <!-- <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><hr class="dropdown-divider"></li> -->
+                                <li><a class="dropdown-item" href="#" onclick="AuthService.logout(); return false;">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Dashboard Content -->
+            <div class="container-fluid">
+                <div class="dashboard-content">
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <h2>Welcome back, <span id="welcomeName">Loading...</span>!</h2>
+                            <p class="text-muted">Here's your activity summary for today</p>
+                        </div>
+                    </div>
+
+                    <!-- Stats Cards -->
+                    <div class="row stats-cards g-4 mb-4">
+                        <div class="col-md-3">
+                            <div class="stats-card">
+                                <h5 class="card-title">Active Tasks</h5>
+                                <h2 class="card-text" id="activeTasksCount">0</h2>
+                                <p class="trend positive">↑ 12% from last week</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stats-card">
+                                <h5 class="card-title">Completed Today</h5>
+                                <h2 class="card-text" id="completedTasksCount">0</h2>
+                                <p class="trend positive">↑ 8% from yesterday</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stats-card">
+                                <h5 class="card-title">Hours Worked</h5>
+                                <h2 class="card-text">6.5</h2>
+                                <p>On track</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stats-card">
+                                <h5 class="card-title">Performance</h5>
+                                <h2 class="card-text">92%</h2>
+                                <p class="trend positive">↑ 5% from last month</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tasks Section -->
+                    <div class="row g-4">
+                        <div class="col-md-8">
+                            <div class="card h-100">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h5 class="card-title mb-0">My Tasks</h5>
+                                    <button class="btn btn-primary btn-sm" onclick="refreshTasks()">
+                                        <i class="fas fa-sync-alt me-1"></i> Refresh
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <div id="tasksList" class="tasks-list"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Task Progress Overview</h5>
+                                </div>
+                                <div class="card-body" id="taskProgressOverview">
+                                    <!-- Progress bars will be inserted here by JS -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/checkAuth.js"></script>
+    <script src="js/user-data.js"></script>
+    <script src="js/dashboard-employee.js"></script>
+</body>
+</html> 

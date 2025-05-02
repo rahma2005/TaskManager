@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Dashboard - Task Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/navigation.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h3>Task Manager</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a href="dashboard-manager.html">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="employees.html">
+                        <i class="fas fa-users"></i>
+                        <span>Employees</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="tasks.html">
+                        <i class="fas fa-tasks"></i>
+                        <span>Tasks</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <button type="button" class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="d-flex align-items-center gap-3">
+                        <!-- <div class="notifications-dropdown dropdown">
+                            <button class="btn btn-link dropdown-toggle position-relative" type="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-bell"></i>
+                                <span class="badge bg-danger position-absolute top-0 start-100 translate-middle">3</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">New task assigned</a></li>
+                                <li><a class="dropdown-item" href="#">Task completed</a></li>
+                                <li><a class="dropdown-item" href="#">New employee request</a></li>
+                            </ul>
+                        </div> -->
+                        <div class="user-dropdown dropdown">
+                            <button class="btn dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown">
+                                <img src="images/profile.jpg" class="rounded-circle me-2" alt="Profile">
+                                <span id="userName">John Manager</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="profile.html">
+                                    <i class="fas fa-user"></i> Profile
+                                </a></li>
+                                <!-- <li><a class="dropdown-item" href="#">
+                                    <i class="fas fa-cog"></i> Settings
+                                </a></li>
+                                <li><hr class="dropdown-divider"></li> -->
+                                <li><a class="dropdown-item" href="#" onclick="AuthService.logout(); return false;">
+                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Dashboard Content -->
+            <div class="container-fluid">
+                <div class="dashboard-content">
+                    <!-- Stats Cards -->
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-3">
+                            <div class="stats-card">
+                                <h5 class="card-title">Total Employees</h5>
+                                <h2 class="card-text" id="totalEmployees">0</h2>
+                                <div class="stats-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stats-card">
+                                <h5 class="card-title">Active Tasks</h5>
+                                <h2 class="card-text" id="activeTasks">0</h2>
+                                <div class="stats-icon">
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stats-card">
+                                <h5 class="card-title">Completed Tasks</h5>
+                                <h2 class="card-text" id="completedTasks">0</h2>
+                                <div class="stats-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stats-card">
+                                <h5 class="card-title">Pending Tasks</h5>
+                                <h2 class="card-text" id="pendingTasks">0</h2>
+                                <div class="stats-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Employee Status and Tasks -->
+                    <div class="row g-4">
+                        <div class="col-md-8">
+                            <div class="card h-100">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h5 class="card-title mb-0">Employee Status</h5>
+                                    <a href="employees.html" class="btn btn-primary btn-sm">View All</a>
+                                </div>
+                                <div class="card-body">
+                                    <div class="employee-status-list">
+                                        <!-- Employee status items will be dynamically added here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h5 class="card-title mb-0">Recent Tasks</h5>
+                                    <a href="tasks.html" class="btn btn-primary btn-sm">View All</a>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tasks-list">
+                                        <!-- Task items will be dynamically added here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/checkAuth.js"></script>
+    <script src="js/user-data.js"></script>
+    <script src="js/dashboard-manager.js"></script>
+</body>
+</html>

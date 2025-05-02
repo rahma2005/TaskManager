@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #2196F3;
+    --text-color: #333;
+    --text-light: #666;
+    --background-light: #f8f9fa;
+    --white: #fff;
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    padding: 2rem 1rem;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.auth-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.brand-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.brand-link i {
+    font-size: 1.8rem;
+}
+
+.auth-form {
+    margin-top: 2rem;
+}
+
+.form-control, .form-select {
+    padding: 0.75rem 1rem;
+    border-color: #dee2e6;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+}
+
+.input-group .btn {
+    padding: 0.75rem;
+}
+
+.social-login {
+    position: relative;
+}
+
+.social-login::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #dee2e6;
+    z-index: 1;
+}
+
+.social-login p {
+    position: relative;
+    z-index: 2;
+    background: var(--white);
+    display: inline-block;
+    padding: 0 1rem;
+}
+
+.btn-outline-primary {
+    border-color: #dee2e6;
+    color: var(--text-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--background-light);
+    border-color: #dee2e6;
+    color: var(--text-color);
+}
+
+/* Animations */
+.auth-card {
+    animation: slideUp 0.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .auth-card {
+        padding: 2rem;
+    }
+
+    .social-login .btn {
+        padding: 0.5rem;
+    }
+} 
