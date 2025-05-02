@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', async function() {
     const token = localStorage.getItem('jwtToken');
     if (!token) return;
 
-    // Get logged in user's username from token
     function getLoggedInUser() {
         try {
             const base64Url = token.split('.')[1];
