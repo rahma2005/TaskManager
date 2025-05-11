@@ -1,0 +1,49 @@
+2025-05-08 00:14:29,828 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h10m24s26ms110µs600ns).
+2025-05-08 00:26:43,188 DEBUG [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getRecentTasks
+2025-05-08 00:26:43,190 DEBUG [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getRecentEmployees
+2025-05-08 00:26:43,194 DEBUG [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-08 00:26:43,197 INFO  [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Method TaskService.getRecentTasks executed successfully in 8 ms
+2025-05-08 00:26:43,198 INFO  [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Method UserService.getRecentEmployees executed successfully in 6 ms
+2025-05-08 00:26:43,199 INFO  [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 4 ms
+2025-05-08 00:41:59,252 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m59s86ms248µs700ns).
+2025-05-08 01:00:46,089 DEBUG [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-08 01:00:46,101 INFO  [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 11 ms
+2025-05-08 01:00:46,101 DEBUG [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-08 01:00:46,113 INFO  [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 10 ms
+2025-05-08 01:01:37,722 DEBUG [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-08 01:01:37,733 DEBUG [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-08 01:01:37,736 DEBUG [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-08 01:01:37,742 INFO  [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 19 ms
+2025-05-08 01:01:37,747 INFO  [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 5 ms
+2025-05-08 01:01:37,747 INFO  [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 11 ms
+2025-05-08 01:02:05,394 DEBUG [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-08 01:02:05,395 DEBUG [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-08 01:02:05,401 INFO  [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 4 ms
+2025-05-08 01:02:05,402 INFO  [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 6 ms
+2025-05-08 01:03:11,538 DEBUG [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-08 01:03:11,539 DEBUG [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getRecentTasks
+2025-05-08 01:03:11,540 DEBUG [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getRecentEmployees
+2025-05-08 01:03:11,544 INFO  [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Method TaskService.getRecentTasks executed successfully in 5 ms
+2025-05-08 01:03:11,547 INFO  [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Method UserService.getRecentEmployees executed successfully in 7 ms
+2025-05-08 01:03:11,547 INFO  [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 8 ms
+2025-05-08 01:03:20,613 DEBUG [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Executing method: AuthService.loginUserByEmail
+2025-05-08 01:03:20,776 INFO  [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Method AuthService.loginUserByEmail executed successfully in 162 ms
+2025-05-08 01:03:20,829 DEBUG [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-08 01:03:20,829 DEBUG [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-08 01:03:20,833 INFO  [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 3 ms
+2025-05-08 01:03:20,833 INFO  [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 3 ms
+2025-05-08 01:03:22,691 DEBUG [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-08 01:03:22,695 INFO  [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 3 ms
+2025-05-08 01:03:22,695 DEBUG [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-08 01:03:22,700 INFO  [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 3 ms
+2025-05-08 01:03:29,582 DEBUG [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getTaskById
+2025-05-08 01:03:29,641 INFO  [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Method TaskService.getTaskById executed successfully in 59 ms
+2025-05-08 01:03:35,902 DEBUG [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-08 01:03:35,906 INFO  [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 4 ms
+2025-05-08 01:03:35,912 DEBUG [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-08 01:03:35,924 INFO  [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 11 ms
+2025-05-08 01:03:39,670 DEBUG [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-08 01:03:39,673 INFO  [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 3 ms
+2025-05-08 01:03:39,675 DEBUG [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-08 01:03:39,678 INFO  [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 3 ms
+2025-05-08 06:04:39,202 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4h47m39s443ms996µs699ns).

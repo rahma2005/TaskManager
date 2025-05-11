@@ -54,5 +54,4 @@ function checkAuth() {
     }
 }
 
-// Call the function immediately
 checkAuth();

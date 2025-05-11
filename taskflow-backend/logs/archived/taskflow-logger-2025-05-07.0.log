@@ -1,0 +1,1159 @@
+2025-05-07 20:54:56,138 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-05-07 20:54:56,212 INFO  [main] c.t.TaskflowBackendApplication - Starting TaskflowBackendApplication using Java 21 with PID 16004 (C:\Users\rhmar\GitHub\TaskManager\taskflow-backend\target\classes started by rhmar in C:\Users\rhmar\GitHub\TaskManager\taskflow-backend)
+2025-05-07 20:54:56,214 DEBUG [main] c.t.TaskflowBackendApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-07 20:54:56,215 INFO  [main] c.t.TaskflowBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-07 20:54:57,344 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07 20:54:57,443 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 84 ms. Found 2 JPA repository interfaces.
+2025-05-07 20:54:58,828 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-07 20:54:58,848 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-07 20:54:58,855 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-07 20:54:58,856 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-07 20:54:59,041 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-07 20:54:59,044 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2732 ms
+2025-05-07 20:54:59,361 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-07 20:55:00,668 ERROR [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:342)
+	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:168)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.isEmbeddedDatabase(DataSourceScriptDatabaseInitializer.java:67)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.isEnabled(AbstractScriptDatabaseInitializer.java:84)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:107)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1231)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:949)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.taskflow.TaskflowBackendApplication.main(TaskflowBackendApplication.java:10)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805)
+	... 41 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62)
+	... 44 common frames omitted
+2025-05-07 20:55:00,830 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-07 20:55:01,004 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-05-07 20:55:01,100 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-07 20:55:01,691 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-07 20:55:01,729 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-07 20:55:02,743 ERROR [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:388)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:364)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1231)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:949)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.taskflow.TaskflowBackendApplication.main(TaskflowBackendApplication.java:10)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805)
+	... 49 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62)
+	... 52 common frames omitted
+2025-05-07 20:55:02,747 WARN  [main] o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:388)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:364)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1231)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:949)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.taskflow.TaskflowBackendApplication.main(TaskflowBackendApplication.java:10)
+2025-05-07 20:55:02,779 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-07 20:55:02,780 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-07 20:55:04,710 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-07 20:55:04,741 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-07 20:55:05,782 ERROR [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:232)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:388)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:364)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1231)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:949)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.taskflow.TaskflowBackendApplication.main(TaskflowBackendApplication.java:10)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805)
+	... 54 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62)
+	... 57 common frames omitted
+2025-05-07 20:55:05,792 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+2025-05-07 20:55:05,793 ERROR [main] o.h.e.jdbc.spi.SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-05-07 20:55:05,815 ERROR [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+2025-05-07 20:55:05,816 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+2025-05-07 20:55:05,819 INFO  [main] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-05-07 20:55:05,835 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-07 20:55:05,854 ERROR [main] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1231)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:949)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.taskflow.TaskflowBackendApplication.main(TaskflowBackendApplication.java:10)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:364)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 16 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:232)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:388)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 20 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	... 41 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805)
+	... 54 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62)
+	... 57 common frames omitted
+2025-05-07 20:55:32,763 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-05-07 20:55:32,816 INFO  [main] c.t.TaskflowBackendApplication - Starting TaskflowBackendApplication using Java 21 with PID 24964 (C:\Users\rhmar\GitHub\TaskManager\taskflow-backend\target\classes started by rhmar in C:\Users\rhmar\GitHub\TaskManager\taskflow-backend)
+2025-05-07 20:55:32,817 DEBUG [main] c.t.TaskflowBackendApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-07 20:55:32,820 INFO  [main] c.t.TaskflowBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-07 20:55:33,792 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07 20:55:33,869 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 2 JPA repository interfaces.
+2025-05-07 20:55:35,557 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-07 20:55:35,572 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-07 20:55:35,589 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-07 20:55:35,589 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-07 20:55:35,658 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-07 20:55:35,660 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2773 ms
+2025-05-07 20:55:35,829 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-07 20:55:36,999 ERROR [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:342)
+	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:168)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.isEmbeddedDatabase(DataSourceScriptDatabaseInitializer.java:67)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.isEnabled(AbstractScriptDatabaseInitializer.java:84)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:107)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1231)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:949)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.taskflow.TaskflowBackendApplication.main(TaskflowBackendApplication.java:10)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805)
+	... 41 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62)
+	... 44 common frames omitted
+2025-05-07 20:55:37,108 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-07 20:55:37,158 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-05-07 20:55:37,202 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-07 20:55:37,447 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-07 20:55:37,479 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-07 20:55:38,506 ERROR [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:388)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:364)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1231)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:949)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.taskflow.TaskflowBackendApplication.main(TaskflowBackendApplication.java:10)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805)
+	... 49 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62)
+	... 52 common frames omitted
+2025-05-07 20:55:38,512 WARN  [main] o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:388)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:364)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1231)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:949)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.taskflow.TaskflowBackendApplication.main(TaskflowBackendApplication.java:10)
+2025-05-07 20:55:38,539 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-07 20:55:38,546 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-07 20:55:40,407 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-07 20:55:40,482 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-07 20:55:41,529 ERROR [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:232)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:388)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:364)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1231)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:949)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.taskflow.TaskflowBackendApplication.main(TaskflowBackendApplication.java:10)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805)
+	... 54 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62)
+	... 57 common frames omitted
+2025-05-07 20:55:41,591 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+2025-05-07 20:55:41,598 ERROR [main] o.h.e.jdbc.spi.SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-05-07 20:55:41,631 ERROR [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+2025-05-07 20:55:41,633 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+2025-05-07 20:55:41,643 INFO  [main] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-05-07 20:55:41,686 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-07 20:55:41,808 ERROR [main] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1231)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:949)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.taskflow.TaskflowBackendApplication.main(TaskflowBackendApplication.java:10)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:364)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 16 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:232)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:388)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 20 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	... 41 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805)
+	... 54 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62)
+	... 57 common frames omitted
+2025-05-07 21:37:44,731 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-05-07 21:37:44,816 INFO  [main] c.t.TaskflowBackendApplication - Starting TaskflowBackendApplication using Java 21 with PID 11872 (C:\Users\rhmar\GitHub\TaskManager\taskflow-backend\target\classes started by rhmar in C:\Users\rhmar\GitHub\TaskManager\taskflow-backend)
+2025-05-07 21:37:44,818 DEBUG [main] c.t.TaskflowBackendApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-07 21:37:44,821 INFO  [main] c.t.TaskflowBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-07 21:37:46,374 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07 21:37:46,462 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 85 ms. Found 2 JPA repository interfaces.
+2025-05-07 21:37:48,227 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-07 21:37:48,248 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-07 21:37:48,258 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-07 21:37:48,258 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-07 21:37:48,390 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-07 21:37:48,398 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3451 ms
+2025-05-07 21:37:48,598 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-07 21:37:49,007 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ef18604
+2025-05-07 21:37:49,007 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-07 21:37:49,190 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-07 21:37:49,390 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-05-07 21:37:49,476 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-07 21:37:50,118 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-07 21:37:50,223 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-07 21:37:50,223 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-07 21:37:51,464 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-07 21:37:51,707 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07 21:37:52,739 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-07 21:37:52,829 WARN  [main] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 9c38a7f4-a1a6-42de-8803-65a0cce8e397
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-07 21:37:53,782 INFO  [main] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7ceb7a60, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1ab780fd, org.springframework.security.web.context.SecurityContextHolderFilter@565983f3, org.springframework.security.web.header.HeaderWriterFilter@4b74a4d, org.springframework.web.filter.CorsFilter@6b8683b8, org.springframework.security.web.authentication.logout.LogoutFilter@2ec258f1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72321701, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f83467, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@495598c5, org.springframework.security.web.access.ExceptionTranslationFilter@5e572b08, org.springframework.security.web.access.intercept.AuthorizationFilter@63024843]
+2025-05-07 21:37:54,485 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-07 21:37:54,522 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-05-07 21:37:54,526 INFO  [main] c.t.TaskflowBackendApplication - Started TaskflowBackendApplication in 10.348 seconds (process running for 11.468)
+2025-05-07 21:38:13,487 INFO  [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-07 21:38:13,487 INFO  [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-07 21:38:13,487 INFO  [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-05-07 21:38:13,670 DEBUG [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Executing method: AuthService.loginUserByEmail
+2025-05-07 21:38:14,136 INFO  [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Method AuthService.loginUserByEmail executed successfully in 466 ms
+2025-05-07 21:38:14,327 DEBUG [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 21:38:14,337 DEBUG [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:38:14,348 INFO  [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 10 ms
+2025-05-07 21:38:14,363 INFO  [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 34 ms
+2025-05-07 21:38:21,601 DEBUG [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:38:21,601 DEBUG [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 21:38:21,606 INFO  [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 1 ms
+2025-05-07 21:38:21,612 INFO  [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 7 ms
+2025-05-07 21:38:39,074 DEBUG [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:38:39,080 DEBUG [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 21:38:39,084 INFO  [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 10 ms
+2025-05-07 21:38:39,097 INFO  [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 13 ms
+2025-05-07 21:38:42,523 DEBUG [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:38:42,532 INFO  [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 8 ms
+2025-05-07 21:38:42,532 DEBUG [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 21:38:42,554 INFO  [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 22 ms
+2025-05-07 21:39:48,034 DEBUG [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 21:39:48,034 DEBUG [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:39:48,044 INFO  [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 10 ms
+2025-05-07 21:39:48,044 INFO  [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 10 ms
+2025-05-07 21:39:48,247 DEBUG [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 21:39:48,247 DEBUG [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:39:48,247 INFO  [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 0 ms
+2025-05-07 21:39:48,256 INFO  [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 9 ms
+2025-05-07 21:39:53,272 DEBUG [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 21:39:53,272 DEBUG [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:39:53,291 INFO  [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 19 ms
+2025-05-07 21:39:53,293 INFO  [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 21 ms
+2025-05-07 21:40:24,247 DEBUG [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Executing method: AuthService.loginUserByEmail
+2025-05-07 21:40:24,462 INFO  [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Method AuthService.loginUserByEmail executed successfully in 206 ms
+2025-05-07 21:40:24,571 DEBUG [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:40:24,576 DEBUG [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getRecentTasks
+2025-05-07 21:40:24,576 DEBUG [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getRecentEmployees
+2025-05-07 21:40:24,581 INFO  [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 10 ms
+2025-05-07 21:40:24,603 INFO  [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Method UserService.getRecentEmployees executed successfully in 24 ms
+2025-05-07 21:40:24,603 INFO  [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Method TaskService.getRecentTasks executed successfully in 25 ms
+2025-05-07 21:40:29,438 DEBUG [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:40:29,446 DEBUG [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 21:40:29,446 DEBUG [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:40:29,455 INFO  [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 17 ms
+2025-05-07 21:40:29,472 INFO  [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 26 ms
+2025-05-07 21:40:29,485 INFO  [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 34 ms
+2025-05-07 21:40:32,923 DEBUG [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:40:32,945 DEBUG [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getRecentEmployees
+2025-05-07 21:40:32,949 DEBUG [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getRecentTasks
+2025-05-07 21:40:32,949 INFO  [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 26 ms
+2025-05-07 21:40:32,967 INFO  [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Method TaskService.getRecentTasks executed successfully in 16 ms
+2025-05-07 21:40:32,969 INFO  [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Method UserService.getRecentEmployees executed successfully in 19 ms
+2025-05-07 21:40:34,730 DEBUG [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:40:34,734 DEBUG [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:40:34,744 INFO  [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 10 ms
+2025-05-07 21:40:34,757 INFO  [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 23 ms
+2025-05-07 21:40:37,672 DEBUG [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:40:37,680 INFO  [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 8 ms
+2025-05-07 21:40:37,682 DEBUG [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getRecentTasks
+2025-05-07 21:40:37,682 DEBUG [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getRecentEmployees
+2025-05-07 21:40:37,708 INFO  [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Method TaskService.getRecentTasks executed successfully in 18 ms
+2025-05-07 21:40:37,716 INFO  [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Method UserService.getRecentEmployees executed successfully in 25 ms
+2025-05-07 21:41:41,429 DEBUG [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:41:41,434 DEBUG [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:41:41,455 INFO  [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 14 ms
+2025-05-07 21:41:41,476 INFO  [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 43 ms
+2025-05-07 21:42:21,368 DEBUG [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 21:42:21,368 DEBUG [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:42:21,368 DEBUG [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:42:21,375 INFO  [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 7 ms
+2025-05-07 21:42:21,377 INFO  [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 9 ms
+2025-05-07 21:42:21,392 INFO  [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 24 ms
+2025-05-07 21:42:26,480 DEBUG [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:42:26,480 DEBUG [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:42:26,486 INFO  [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 6 ms
+2025-05-07 21:42:26,499 INFO  [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 19 ms
+2025-05-07 21:42:40,687 DEBUG [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:42:40,693 INFO  [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 6 ms
+2025-05-07 21:42:40,712 DEBUG [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 21:42:40,712 DEBUG [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:42:40,727 INFO  [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 15 ms
+2025-05-07 21:42:40,736 INFO  [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 21 ms
+2025-05-07 21:43:46,991 DEBUG [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:43:46,991 DEBUG [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 21:43:46,991 DEBUG [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:43:46,997 INFO  [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 6 ms
+2025-05-07 21:43:46,998 INFO  [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 7 ms
+2025-05-07 21:43:47,006 INFO  [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 15 ms
+2025-05-07 21:43:49,279 DEBUG [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:43:49,279 DEBUG [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 21:43:49,281 DEBUG [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:43:49,287 INFO  [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 4 ms
+2025-05-07 21:43:49,289 INFO  [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 4 ms
+2025-05-07 21:43:49,292 INFO  [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 7 ms
+2025-05-07 21:48:53,379 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m4s115ms322µs400ns).
+2025-05-07 21:49:00,588 DEBUG [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getRecentEmployees
+2025-05-07 21:49:00,588 DEBUG [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getRecentTasks
+2025-05-07 21:49:00,590 DEBUG [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:49:00,611 INFO  [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Method UserService.getRecentEmployees executed successfully in 16 ms
+2025-05-07 21:49:00,620 INFO  [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 13 ms
+2025-05-07 21:49:00,622 INFO  [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Method TaskService.getRecentTasks executed successfully in 17 ms
+2025-05-07 21:49:04,572 DEBUG [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:49:04,572 DEBUG [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:49:04,579 INFO  [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 6 ms
+2025-05-07 21:49:04,590 INFO  [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 16 ms
+2025-05-07 21:51:33,448 DEBUG [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:51:33,461 INFO  [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 11 ms
+2025-05-07 21:51:33,463 DEBUG [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 21:51:33,471 DEBUG [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:51:33,484 INFO  [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 13 ms
+2025-05-07 21:51:33,484 INFO  [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 13 ms
+2025-05-07 21:51:44,879 DEBUG [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:51:44,879 DEBUG [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:51:44,890 INFO  [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 11 ms
+2025-05-07 21:51:44,919 INFO  [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 36 ms
+2025-05-07 21:53:51,874 DEBUG [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:53:51,876 DEBUG [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:53:51,885 INFO  [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 7 ms
+2025-05-07 21:53:51,893 INFO  [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 15 ms
+2025-05-07 21:53:53,456 DEBUG [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:53:53,456 DEBUG [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:53:53,462 INFO  [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 6 ms
+2025-05-07 21:53:53,467 INFO  [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 11 ms
+2025-05-07 21:55:28,471 DEBUG [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:55:28,471 DEBUG [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 21:55:28,471 DEBUG [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:55:28,487 INFO  [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 14 ms
+2025-05-07 21:55:28,491 INFO  [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 16 ms
+2025-05-07 21:55:28,496 INFO  [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 25 ms
+2025-05-07 21:55:28,761 DEBUG [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:55:28,761 DEBUG [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 21:55:28,761 DEBUG [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:55:28,763 INFO  [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 2 ms
+2025-05-07 21:55:28,763 INFO  [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 2 ms
+2025-05-07 21:55:28,771 INFO  [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 10 ms
+2025-05-07 21:56:27,805 DEBUG [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:56:27,808 DEBUG [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:56:27,812 INFO  [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 7 ms
+2025-05-07 21:56:27,814 INFO  [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 6 ms
+2025-05-07 21:57:18,385 DEBUG [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:57:18,405 INFO  [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 20 ms
+2025-05-07 21:57:18,618 DEBUG [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:57:18,619 DEBUG [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:57:18,624 INFO  [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 6 ms
+2025-05-07 21:57:18,629 INFO  [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 10 ms
+2025-05-07 21:57:20,984 DEBUG [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:57:21,000 INFO  [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 16 ms
+2025-05-07 21:57:23,469 DEBUG [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:57:23,494 INFO  [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 24 ms
+2025-05-07 21:57:26,881 DEBUG [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:57:26,897 INFO  [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 16 ms
+2025-05-07 21:57:30,382 DEBUG [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:57:30,395 INFO  [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 13 ms
+2025-05-07 21:57:33,701 DEBUG [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:57:33,722 INFO  [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 21 ms
+2025-05-07 21:57:36,019 DEBUG [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:57:36,034 INFO  [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 15 ms
+2025-05-07 21:57:38,481 DEBUG [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getRecentTasks
+2025-05-07 21:57:38,481 DEBUG [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getRecentEmployees
+2025-05-07 21:57:38,481 DEBUG [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:57:38,490 INFO  [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Method TaskService.getRecentTasks executed successfully in 9 ms
+2025-05-07 21:57:38,490 INFO  [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 1 ms
+2025-05-07 21:57:38,497 INFO  [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Method UserService.getRecentEmployees executed successfully in 16 ms
+2025-05-07 21:57:40,272 DEBUG [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:57:40,274 DEBUG [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 21:57:40,274 DEBUG [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 21:57:40,284 INFO  [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 10 ms
+2025-05-07 21:57:40,285 INFO  [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 11 ms
+2025-05-07 21:57:40,285 INFO  [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 11 ms
+2025-05-07 21:58:20,408 DEBUG [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getRecentEmployees
+2025-05-07 21:58:20,408 DEBUG [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:58:20,408 DEBUG [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getRecentTasks
+2025-05-07 21:58:20,416 INFO  [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 6 ms
+2025-05-07 21:58:20,416 INFO  [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Method TaskService.getRecentTasks executed successfully in 4 ms
+2025-05-07 21:58:20,416 INFO  [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Method UserService.getRecentEmployees executed successfully in 7 ms
+2025-05-07 21:58:51,826 DEBUG [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:58:51,831 DEBUG [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getRecentTasks
+2025-05-07 21:58:51,831 DEBUG [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getRecentEmployees
+2025-05-07 21:58:51,840 INFO  [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 12 ms
+2025-05-07 21:58:51,844 INFO  [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Method TaskService.getRecentTasks executed successfully in 11 ms
+2025-05-07 21:58:51,846 INFO  [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Method UserService.getRecentEmployees executed successfully in 12 ms
+2025-05-07 21:58:53,166 DEBUG [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getRecentEmployees
+2025-05-07 21:58:53,166 DEBUG [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 21:58:53,166 DEBUG [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getRecentTasks
+2025-05-07 21:58:53,177 INFO  [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 7 ms
+2025-05-07 21:58:53,178 INFO  [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Method TaskService.getRecentTasks executed successfully in 4 ms
+2025-05-07 21:58:53,178 INFO  [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Method UserService.getRecentEmployees executed successfully in 12 ms
+2025-05-07 22:01:14,287 DEBUG [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 22:01:14,300 DEBUG [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 22:01:14,305 INFO  [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 15 ms
+2025-05-07 22:01:14,312 INFO  [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 6 ms
+2025-05-07 22:01:15,834 DEBUG [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 22:01:15,847 DEBUG [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getRecentEmployees
+2025-05-07 22:01:15,849 DEBUG [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getRecentTasks
+2025-05-07 22:01:15,853 INFO  [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 17 ms
+2025-05-07 22:01:15,867 INFO  [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Method TaskService.getRecentTasks executed successfully in 16 ms
+2025-05-07 22:01:15,874 INFO  [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Method UserService.getRecentEmployees executed successfully in 25 ms
+2025-05-07 22:01:22,418 DEBUG [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getRecentTasks
+2025-05-07 22:01:22,418 DEBUG [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getRecentEmployees
+2025-05-07 22:01:22,420 DEBUG [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 22:01:22,431 INFO  [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Method TaskService.getRecentTasks executed successfully in 6 ms
+2025-05-07 22:01:22,434 INFO  [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 6 ms
+2025-05-07 22:01:22,434 INFO  [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Method UserService.getRecentEmployees executed successfully in 8 ms
+2025-05-07 22:03:52,491 DEBUG [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getRecentEmployees
+2025-05-07 22:03:52,491 DEBUG [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 22:03:52,491 DEBUG [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getRecentTasks
+2025-05-07 22:03:52,496 INFO  [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 5 ms
+2025-05-07 22:03:52,496 INFO  [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Method UserService.getRecentEmployees executed successfully in 5 ms
+2025-05-07 22:03:52,497 INFO  [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Method TaskService.getRecentTasks executed successfully in 6 ms
+2025-05-07 22:04:01,839 DEBUG [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Executing method: AuthService.loginUserByEmail
+2025-05-07 22:04:02,082 INFO  [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Method AuthService.loginUserByEmail executed successfully in 241 ms
+2025-05-07 22:04:02,184 DEBUG [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 22:04:02,184 INFO  [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 0 ms
+2025-05-07 22:04:02,201 DEBUG [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 22:04:02,205 INFO  [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 4 ms
+2025-05-07 22:04:03,683 DEBUG [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 22:04:03,688 INFO  [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 5 ms
+2025-05-07 22:04:03,690 DEBUG [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 22:04:03,701 INFO  [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 11 ms
+2025-05-07 22:04:39,327 DEBUG [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 22:04:39,333 INFO  [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 6 ms
+2025-05-07 22:04:41,918 DEBUG [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 22:04:41,929 INFO  [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 9 ms
+2025-05-07 22:05:00,973 DEBUG [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 22:05:00,979 INFO  [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 6 ms
+2025-05-07 22:05:11,655 DEBUG [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Executing method: AuthService.loginUserByEmail
+2025-05-07 22:05:11,808 INFO  [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Method AuthService.loginUserByEmail executed successfully in 153 ms
+2025-05-07 22:05:11,899 DEBUG [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getRecentTasks
+2025-05-07 22:05:11,899 DEBUG [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getRecentEmployees
+2025-05-07 22:05:11,899 DEBUG [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 22:05:11,903 INFO  [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 2 ms
+2025-05-07 22:05:11,903 INFO  [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Method UserService.getRecentEmployees executed successfully in 2 ms
+2025-05-07 22:05:11,903 INFO  [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Method TaskService.getRecentTasks executed successfully in 2 ms
+2025-05-07 22:05:17,614 DEBUG [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 22:05:17,614 DEBUG [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 22:05:17,616 INFO  [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 2 ms
+2025-05-07 22:05:17,619 INFO  [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 5 ms
+2025-05-07 22:05:18,163 DEBUG [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 22:05:18,166 DEBUG [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 22:05:18,166 DEBUG [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 22:05:18,166 INFO  [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 3 ms
+2025-05-07 22:05:18,178 INFO  [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 12 ms
+2025-05-07 22:05:18,178 INFO  [http-nio-8080-exec-8] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 12 ms
+2025-05-07 22:05:38,003 DEBUG [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 22:05:38,003 DEBUG [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 22:05:38,005 INFO  [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 0 ms
+2025-05-07 22:05:38,005 INFO  [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 0 ms
+2025-05-07 22:05:39,907 DEBUG [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 22:05:39,918 INFO  [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 11 ms
+2025-05-07 22:05:39,920 DEBUG [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getAllTasks
+2025-05-07 22:05:39,924 DEBUG [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getAllEmployeesFiltered
+2025-05-07 22:05:39,928 INFO  [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Method TaskService.getAllTasks executed successfully in 6 ms
+2025-05-07 22:05:39,930 INFO  [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Method UserService.getAllEmployeesFiltered executed successfully in 6 ms
+2025-05-07 22:06:18,034 DEBUG [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 22:06:18,045 INFO  [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 9 ms
+2025-05-07 22:06:18,045 DEBUG [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getRecentEmployees
+2025-05-07 22:06:18,045 DEBUG [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getRecentTasks
+2025-05-07 22:06:18,062 INFO  [http-nio-8080-exec-3] com.taskflow.aspect.LoggingAspect - Method TaskService.getRecentTasks executed successfully in 15 ms
+2025-05-07 22:06:18,066 INFO  [http-nio-8080-exec-10] com.taskflow.aspect.LoggingAspect - Method UserService.getRecentEmployees executed successfully in 21 ms
+2025-05-07 22:08:51,868 DEBUG [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getRecentEmployees
+2025-05-07 22:08:51,868 DEBUG [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 22:08:51,876 DEBUG [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getRecentTasks
+2025-05-07 22:08:51,884 INFO  [http-nio-8080-exec-6] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 7 ms
+2025-05-07 22:08:51,885 INFO  [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Method TaskService.getRecentTasks executed successfully in 7 ms
+2025-05-07 22:08:51,885 INFO  [http-nio-8080-exec-1] com.taskflow.aspect.LoggingAspect - Method UserService.getRecentEmployees executed successfully in 8 ms
+2025-05-07 22:08:57,329 DEBUG [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getRecentEmployees
+2025-05-07 22:08:57,329 DEBUG [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getRecentTasks
+2025-05-07 22:08:57,329 DEBUG [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 22:08:57,335 INFO  [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 6 ms
+2025-05-07 22:08:57,335 INFO  [http-nio-8080-exec-5] com.taskflow.aspect.LoggingAspect - Method UserService.getRecentEmployees executed successfully in 6 ms
+2025-05-07 22:08:57,335 INFO  [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Method TaskService.getRecentTasks executed successfully in 6 ms
+2025-05-07 22:09:40,167 DEBUG [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getRecentTasks
+2025-05-07 22:09:40,167 DEBUG [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getRecentEmployees
+2025-05-07 22:09:40,167 DEBUG [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 22:09:40,178 INFO  [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Method TaskService.getRecentTasks executed successfully in 9 ms
+2025-05-07 22:09:40,178 INFO  [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Method UserService.getRecentEmployees executed successfully in 7 ms
+2025-05-07 22:09:40,178 INFO  [http-nio-8080-exec-4] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 7 ms
+2025-05-07 22:13:51,904 DEBUG [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Executing method: TaskService.getRecentTasks
+2025-05-07 22:13:51,909 DEBUG [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getRecentEmployees
+2025-05-07 22:13:51,909 DEBUG [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Executing method: UserService.getUserByUsername
+2025-05-07 22:13:51,914 INFO  [http-nio-8080-exec-2] com.taskflow.aspect.LoggingAspect - Method TaskService.getRecentTasks executed successfully in 8 ms
+2025-05-07 22:13:51,917 INFO  [http-nio-8080-exec-9] com.taskflow.aspect.LoggingAspect - Method UserService.getUserByUsername executed successfully in 6 ms
+2025-05-07 22:13:51,917 INFO  [http-nio-8080-exec-7] com.taskflow.aspect.LoggingAspect - Method UserService.getRecentEmployees executed successfully in 7 ms
+2025-05-07 23:04:05,802 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=27m41s687ms915µs700ns).
