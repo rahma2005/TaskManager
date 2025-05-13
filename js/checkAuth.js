@@ -1,3 +1,8 @@
+const commonPages = [
+    '/index.html',
+    '/profile.html'
+];
+
 const managerPages = [
     '/dashboard-manager.html',
     '/employees.html',

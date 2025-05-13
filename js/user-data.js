@@ -26,7 +26,7 @@ async function updateUserData() {
 
     try {
         // Fetch user data from API
-        const response = await fetch(`http://localhost:8080/api/users/${userData.sub}`, {
+        const response = await fetch(ENDPOINTS.USER_PROFILE(userData.sub), {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

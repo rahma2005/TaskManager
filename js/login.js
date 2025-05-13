@@ -8,7 +8,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const loginData = { email, password };
 
     // Send a POST request to the backend for login
-    fetch('http://localhost:8080/api/auth/login', {
+    fetch(ENDPOINTS.LOGIN, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

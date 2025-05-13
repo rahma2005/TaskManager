@@ -28,41 +28,61 @@ async function loadMyTasks(filters = {}) {
             throw new Error('User information not found');
         }
 
-        // Get all tasks and filter for the current user
-        const response = await fetch('http://localhost:8080/api/tasks', {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        });
-
-        if (!response.ok) {
-            throw new Error('Failed to fetch tasks');
-        }
-
-        const allTasks = await response.json();
+        let myTasks = [];
         
-        // Filter tasks assigned to current user
-        let myTasks = allTasks.filter(task => task.assignedTo === currentUsername);
+        // Try to get tasks using the specific assigned tasks endpoint
+        try {
+            const response = await fetch(ENDPOINTS.ASSIGNED_TASKS, {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
 
+            if (response.ok) {
+                myTasks = await response.json();
+            } else {
+                throw new Error('Assigned tasks endpoint failed');
+            }
+        } catch (error) {
+            console.warn('Using fallback method to fetch tasks:', error.message);
+            
+            // Fallback: get all tasks and filter for the current user
+            const allTasksResponse = await fetch(ENDPOINTS.TASKS, {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+            
+            if (!allTasksResponse.ok) {
+                throw new Error('Failed to fetch tasks');
+            }
+            
+            const allTasks = await allTasksResponse.json();
+            myTasks = allTasks.filter(task => task.assignedTo === currentUsername);
+        }
+        
         // Apply additional filters
+        let filteredTasks = [...myTasks]; // Create a copy to filter
+        
         if (filters.status) {
-            myTasks = myTasks.filter(task => task.status === filters.status.toUpperCase());
+            filteredTasks = filteredTasks.filter(task => task.status === filters.status.toUpperCase());
         }
         if (filters.priority) {
-            myTasks = myTasks.filter(task => task.priority === filters.priority.toUpperCase());
+            filteredTasks = filteredTasks.filter(task => task.priority === filters.priority.toUpperCase());
         }
         if (filters.search) {
             const searchLower = filters.search.toLowerCase();
-            myTasks = myTasks.filter(task => 
-                task.title.toLowerCase().includes(searchLower) ||
-                task.description.toLowerCase().includes(searchLower)
+            filteredTasks = filteredTasks.filter(task => 
+                (task.title && task.title.toLowerCase().includes(searchLower)) ||
+                (task.description && task.description.toLowerCase().includes(searchLower))
             );
         }
         if (filters.dueDate) {
             const today = new Date();
             switch(filters.dueDate) {
                 case 'today':
-                    myTasks = myTasks.filter(task => {
+                    filteredTasks = filteredTasks.filter(task => {
+                        if (!task.dueDate) return false;
                         const taskDate = new Date(task.dueDate);
                         return taskDate.toDateString() === today.toDateString();
                     });
@@ -70,7 +90,8 @@ async function loadMyTasks(filters = {}) {
                 case 'week':
                     const weekFromNow = new Date(today);
                     weekFromNow.setDate(today.getDate() + 7);
-                    myTasks = myTasks.filter(task => {
+                    filteredTasks = filteredTasks.filter(task => {
+                        if (!task.dueDate) return false;
                         const taskDate = new Date(task.dueDate);
                         return taskDate >= today && taskDate <= weekFromNow;
                     });
@@ -78,7 +99,8 @@ async function loadMyTasks(filters = {}) {
                 case 'month':
                     const monthFromNow = new Date(today);
                     monthFromNow.setMonth(today.getMonth() + 1);
-                    myTasks = myTasks.filter(task => {
+                    filteredTasks = filteredTasks.filter(task => {
+                        if (!task.dueDate) return false;
                         const taskDate = new Date(task.dueDate);
                         return taskDate >= today && taskDate <= monthFromNow;
                     });
@@ -86,7 +108,7 @@ async function loadMyTasks(filters = {}) {
             }
         }
 
-        displayTasks(myTasks);
+        displayTasks(filteredTasks);
     } catch (error) {
         console.error('Error loading tasks:', error);
         const tasksListElement = document.getElementById('tasksList');
@@ -106,15 +128,15 @@ function displayTasks(tasks) {
         <div class="task-item card mb-3">
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center">
-                    <h5 class="card-title mb-1">${task.title}</h5>
-                    <span class="badge bg-${getPriorityBadgeColor(task.priority)}">${task.priority}</span>
+                    <h5 class="card-title mb-1">${task.title || 'Untitled Task'}</h5>
+                    <span class="badge bg-${getPriorityBadgeColor(task.priority || 'MEDIUM')}">${task.priority || 'MEDIUM'}</span>
                 </div>
                 <p class="card-text text-muted mb-2">${task.description || 'No description provided'}</p>
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
-                        <span class="badge bg-${getStatusBadgeColor(task.status)}">${task.status}</span>
+                        <span class="badge bg-${getStatusBadgeColor(task.status || 'PENDING')}">${task.status || 'PENDING'}</span>
                         <small class="text-muted ms-2">Due: ${formatDate(task.dueDate)}</small>
-                        <small class="text-muted ms-2">Assigned by: ${task.assignee}</small>
+                        <small class="text-muted ms-2">Assigned by: ${task.assignee || 'System'}</small>
                     </div>
                     <div class="btn-group">
                         <button class="btn btn-sm btn-outline-primary" onclick="updateTaskStatus('${task.id}')">
@@ -169,7 +191,7 @@ async function updateTaskStatus(taskId) {
         }
 
         // First, fetch the current task data
-        const getResponse = await fetch(`http://localhost:8080/api/tasks/${taskId}`, {
+        const getResponse = await fetch(ENDPOINTS.TASK_BY_ID(taskId), {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -191,7 +213,7 @@ async function updateTaskStatus(taskId) {
             status: newStatus
         };
 
-        const response = await fetch(`http://localhost:8080/api/tasks/${taskId}`, {
+        const response = await fetch(ENDPOINTS.TASK_BY_ID(taskId), {
             method: 'PUT',
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -200,12 +222,13 @@ async function updateTaskStatus(taskId) {
             body: JSON.stringify(updatedTask)
         });
 
-        if (!response.ok) {
-            throw new Error('Failed to update task status');
-        }
+        if (!response.ok) throw new Error('Failed to update task status');
 
-        // Reload tasks to show updated status
-        loadMyTasks();
+        // Refresh tasks display
+        await loadMyTasks();
+        
+        // Show success message
+        alert(`Task status updated to ${newStatus}`);
     } catch (error) {
         console.error('Error updating task status:', error);
         alert('Failed to update task status. Please try again.');

@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const currentUsername = getLoggedInUser();
             if (!currentUsername) throw new Error('User information not found');
 
-            const response = await fetch('http://localhost:8080/api/tasks', {
+            const response = await fetch(ENDPOINTS.TASKS, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -172,7 +172,7 @@ async function updateTaskStatus(taskId) {
         if (!token) throw new Error('No authentication token found');
 
         // First, fetch the current task data
-        const getResponse = await fetch(`http://localhost:8080/api/tasks/${taskId}`, {
+        const getResponse = await fetch(ENDPOINTS.TASK_BY_ID(taskId), {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -194,7 +194,7 @@ async function updateTaskStatus(taskId) {
             status: newStatus
         };
 
-        const response = await fetch(`http://localhost:8080/api/tasks/${taskId}`, {
+        const response = await fetch(ENDPOINTS.TASK_BY_ID(taskId), {
             method: 'PUT',
             headers: {
                 'Authorization': `Bearer ${token}`,

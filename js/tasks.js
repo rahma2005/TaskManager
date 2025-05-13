@@ -12,7 +12,7 @@ function loadTasks() {
         return;
     }
 
-    fetch('http://localhost:8080/api/tasks', {
+    fetch(ENDPOINTS.TASKS, {
         headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
@@ -133,7 +133,7 @@ function loadEmployees() {
         return;
     }
 
-    fetch('http://localhost:8080/api/users/employees', {
+    fetch(ENDPOINTS.EMPLOYEES, {
         headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
@@ -182,7 +182,7 @@ function loadEmployees() {
 
 function deleteTask(id) {
     if (!confirm('Are you sure you want to delete this task?')) return;
-    fetch(`http://localhost:8080/api/tasks/${id}`, {
+    fetch(ENDPOINTS.TASK_BY_ID(id), {
         method: 'DELETE',
         headers: {
             'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
@@ -205,7 +205,7 @@ function editTask(id) {
         return;
     }
 
-    fetch(`http://localhost:8080/api/tasks/${id}`, {
+    fetch(ENDPOINTS.TASK_BY_ID(id), {
         headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
@@ -255,7 +255,7 @@ function saveTask() {
     };
 
     const method = taskId ? 'PUT' : 'POST';
-    const url = taskId ? `http://localhost:8080/api/tasks/${taskId}` : 'http://localhost:8080/api/tasks';
+    const url = taskId ? ENDPOINTS.TASK_BY_ID(taskId) : ENDPOINTS.TASKS;
 
     fetch(url, {
         method: method,
@@ -288,9 +288,12 @@ function showEditRoleModal(id, currentRole) {
 function saveEmployeeRole() {
     const id = document.getElementById('editEmployeeId').value;
     const newRole = document.getElementById('editEmployeeRole').value;
-    fetch(`http://localhost:8080/api/auth/employees/${id}/role`, {
+    fetch(ENDPOINTS.UPDATE_EMPLOYEE_ROLE(id), {
         method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('jwtToken')}` 
+        },
         body: JSON.stringify({ role: newRole })
     })
     .then(response => {

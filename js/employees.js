@@ -21,7 +21,7 @@ function loadEmployees() {
     const searchQuery = document.querySelector('input[type="text"]').value.trim();
 
     // Construct the API URL with query parameters for filters
-    let url = `http://localhost:8080/api/users/employees?status=${statusFilter}&department=${departmentFilter}&search=${searchQuery}`;
+    let url = `${ENDPOINTS.EMPLOYEES}?status=${statusFilter}&department=${departmentFilter}&search=${searchQuery}`;
 
     // Fetch employee data with filters applied
     fetch(url, {
@@ -108,7 +108,7 @@ window.saveEmployeeInfo = function() {
     const newDepartment = document.getElementById('editEmployeeDepartment').value;
     const newStatus = document.getElementById('editEmployeeStatus').value;
 
-    fetch(`http://localhost:8080/api/users/employees/${id}/update`, {
+    fetch(ENDPOINTS.UPDATE_EMPLOYEE(id), {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',

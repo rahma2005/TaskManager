@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     // Fetch tasks for the user
     async function fetchTasks() {
-        const response = await fetch('http://localhost:8080/api/tasks', {
+        const response = await fetch(ENDPOINTS.TASKS, {
             headers: { 'Authorization': `Bearer ${token}` }
         });
         if (!response.ok) return [];

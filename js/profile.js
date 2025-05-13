@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Fetch user profile data from API
     async function fetchUserProfile() {
         try {
-            const response = await fetch(`http://localhost:8080/api/users/${username}`, {
+            const response = await fetch(ENDPOINTS.USER_PROFILE(username), {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             };
 
             try {
-                const response = await fetch(`http://localhost:8080/api/users/${username}`, {
+                const response = await fetch(ENDPOINTS.USER_PROFILE(username), {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
