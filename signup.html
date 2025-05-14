@@ -162,7 +162,7 @@
 
     
             // Send a POST request to the backend for user registration
-            fetch('http://localhost:8080/api/auth/register', {
+            fetch(ENDPOINTS.REGISTER, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -40,7 +40,7 @@ public class User {
     private Role role;
 
     @Column(name = "profile_picture")
-    private String profilePicture = "https://via.placeholder.com/150";
+    private String profilePicture = "images/profile.png";
 
     @Column(name = "phone")
     private String phone;
