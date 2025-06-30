@@ -838,3 +838,144 @@ java.net.ConnectException: Connection refused: no further information
 2025-05-14 03:05:52 [http-nio-8081-exec-2] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 6 ms
 2025-05-14 03:05:52 [http-nio-8081-exec-5] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 4 ms
 2025-05-14 03:05:52 [http-nio-8081-exec-5] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 4 ms
+2025-05-14 09:37:31 [main] INFO  c.t.u.UserServiceApplication - Starting UserServiceApplication using Java 21 with PID 26800 (C:\Users\rhmar\GitHub\TaskManager\taskflow-backend\user-service\target\classes started by rhmar in C:\Users\rhmar\GitHub\TaskManager\taskflow-backend\user-service)
+2025-05-14 09:37:31 [main] DEBUG c.t.u.UserServiceApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2025-05-14 09:37:31 [main] INFO  c.t.u.UserServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-14 09:37:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-14 09:37:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 78 ms. Found 1 JPA repository interface.
+2025-05-14 09:37:34 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-05-14 09:37:34 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-14 09:37:34 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-05-14 09:37:34 [main] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2025-05-14 09:37:34 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3321 ms
+2025-05-14 09:37:35 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-14 09:37:35 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-05-14 09:37:35 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-14 09:37:35 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-14 09:37:35 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-14 09:37:35 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@210a26b
+2025-05-14 09:37:35 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-14 09:37:35 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-14 09:37:35 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-14 09:37:37 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-14 09:37:37 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-14 09:37:38 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-14 09:37:38 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@17b9c9ff, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b45f7ef, org.springframework.security.web.context.SecurityContextHolderFilter@6805415d, org.springframework.security.web.header.HeaderWriterFilter@7692c0e9, org.springframework.web.filter.CorsFilter@5da41d02, org.springframework.security.web.authentication.logout.LogoutFilter@1a4564a2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3791160a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d9cac6e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@17d837ab, org.springframework.security.web.access.ExceptionTranslationFilter@4f0f56f5, org.springframework.security.web.access.intercept.AuthorizationFilter@16160a37]
+2025-05-14 09:37:39 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/api'
+2025-05-14 09:37:39 [main] INFO  c.t.u.UserServiceApplication - Started UserServiceApplication in 9.274 seconds (process running for 10.193)
+2025-05-14 09:38:07 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-14 09:38:07 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-14 09:38:07 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-14 09:38:09 [http-nio-8081-exec-1] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.AuthService::loginUserByEmail executed successfully in 1037 ms
+2025-05-14 09:38:09 [http-nio-8081-exec-1] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.AuthController::login executed successfully in 1043 ms
+2025-05-14 09:38:09 [http-nio-8081-exec-3] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 14 ms
+2025-05-14 09:38:09 [http-nio-8081-exec-3] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 14 ms
+2025-05-14 09:38:13 [http-nio-8081-exec-4] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 17 ms
+2025-05-14 09:38:13 [http-nio-8081-exec-4] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 17 ms
+2025-05-14 09:38:13 [http-nio-8081-exec-5] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 11 ms
+2025-05-14 09:38:13 [http-nio-8081-exec-5] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 12 ms
+2025-05-14 09:38:24 [http-nio-8081-exec-6] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 7 ms
+2025-05-14 09:38:24 [http-nio-8081-exec-6] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 9 ms
+2025-05-14 09:40:36 [http-nio-8081-exec-9] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 7 ms
+2025-05-14 09:40:36 [http-nio-8081-exec-9] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 7 ms
+2025-05-14 09:46:16 [http-nio-8081-exec-1] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.AuthService::loginUserByEmail executed successfully in 356 ms
+2025-05-14 09:46:16 [http-nio-8081-exec-1] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.AuthController::login executed successfully in 358 ms
+2025-05-14 09:46:16 [http-nio-8081-exec-2] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 7 ms
+2025-05-14 09:46:16 [http-nio-8081-exec-2] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 7 ms
+2025-05-14 09:46:18 [http-nio-8081-exec-3] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 6 ms
+2025-05-14 09:46:18 [http-nio-8081-exec-3] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 6 ms
+2025-05-14 09:46:18 [http-nio-8081-exec-4] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 5 ms
+2025-05-14 09:46:18 [http-nio-8081-exec-4] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 5 ms
+2025-05-14 09:46:20 [http-nio-8081-exec-5] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 30 ms
+2025-05-14 09:46:20 [http-nio-8081-exec-5] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 43 ms
+2025-05-14 09:46:29 [http-nio-8081-exec-6] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.AuthService::loginUserByEmail executed successfully in 340 ms
+2025-05-14 09:46:29 [http-nio-8081-exec-6] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.AuthController::login executed successfully in 340 ms
+2025-05-14 09:46:29 [http-nio-8081-exec-10] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 25 ms
+2025-05-14 09:46:29 [http-nio-8081-exec-10] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 25 ms
+2025-05-14 09:46:29 [http-nio-8081-exec-2] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getAllEmployeesFiltered executed successfully in 32 ms
+2025-05-14 09:46:29 [http-nio-8081-exec-2] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getAllEmployees executed successfully in 32 ms
+2025-05-14 09:46:29 [http-nio-8081-exec-9] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getRecentEmployees executed successfully in 83 ms
+2025-05-14 09:46:29 [http-nio-8081-exec-9] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getEmployeesPreview executed successfully in 83 ms
+2025-05-14 09:46:30 [http-nio-8081-exec-4] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 10 ms
+2025-05-14 09:46:30 [http-nio-8081-exec-4] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 10 ms
+2025-05-14 09:46:30 [http-nio-8081-exec-5] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getAllEmployeesFiltered executed successfully in 31 ms
+2025-05-14 09:46:30 [http-nio-8081-exec-5] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getAllEmployees executed successfully in 32 ms
+2025-05-14 09:46:32 [http-nio-8081-exec-6] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 19 ms
+2025-05-14 09:46:32 [http-nio-8081-exec-6] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 38 ms
+2025-05-14 09:46:32 [http-nio-8081-exec-8] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getRecentEmployees executed successfully in 63 ms
+2025-05-14 09:46:32 [http-nio-8081-exec-8] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getEmployeesPreview executed successfully in 68 ms
+2025-05-14 09:46:32 [http-nio-8081-exec-7] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getAllEmployeesFiltered executed successfully in 35 ms
+2025-05-14 09:46:32 [http-nio-8081-exec-7] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getAllEmployees executed successfully in 35 ms
+2025-05-14 09:48:54 [http-nio-8081-exec-3] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 6 ms
+2025-05-14 09:48:54 [http-nio-8081-exec-3] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 6 ms
+2025-05-14 09:48:54 [http-nio-8081-exec-4] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getAllEmployeesFiltered executed successfully in 18 ms
+2025-05-14 09:48:54 [http-nio-8081-exec-4] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getAllEmployees executed successfully in 20 ms
+2025-05-14 09:49:00 [http-nio-8081-exec-5] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 8 ms
+2025-05-14 09:49:00 [http-nio-8081-exec-5] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 9 ms
+2025-05-14 09:49:00 [http-nio-8081-exec-6] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getRecentEmployees executed successfully in 15 ms
+2025-05-14 09:49:00 [http-nio-8081-exec-6] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getEmployeesPreview executed successfully in 15 ms
+2025-05-14 09:49:00 [http-nio-8081-exec-8] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getAllEmployeesFiltered executed successfully in 20 ms
+2025-05-14 09:49:00 [http-nio-8081-exec-8] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getAllEmployees executed successfully in 20 ms
+2025-05-14 09:53:21 [http-nio-8081-exec-9] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.AuthService::loginUserByEmail executed successfully in 344 ms
+2025-05-14 09:53:21 [http-nio-8081-exec-9] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.AuthController::login executed successfully in 345 ms
+2025-05-14 09:53:22 [http-nio-8081-exec-10] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getRecentEmployees executed successfully in 17 ms
+2025-05-14 09:53:22 [http-nio-8081-exec-2] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 19 ms
+2025-05-14 09:53:22 [http-nio-8081-exec-2] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 19 ms
+2025-05-14 09:53:22 [http-nio-8081-exec-10] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getEmployeesPreview executed successfully in 19 ms
+2025-05-14 09:53:22 [http-nio-8081-exec-3] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getAllEmployeesFiltered executed successfully in 8 ms
+2025-05-14 09:53:22 [http-nio-8081-exec-3] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getAllEmployees executed successfully in 14 ms
+2025-05-14 10:09:43 [http-nio-8081-exec-8] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.AuthService::loginUserByEmail executed successfully in 308 ms
+2025-05-14 10:09:43 [http-nio-8081-exec-8] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.AuthController::login executed successfully in 316 ms
+2025-05-14 10:09:43 [http-nio-8081-exec-1] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 9 ms
+2025-05-14 10:09:43 [http-nio-8081-exec-1] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 10 ms
+2025-05-14 10:09:43 [http-nio-8081-exec-7] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getRecentEmployees executed successfully in 13 ms
+2025-05-14 10:09:43 [http-nio-8081-exec-7] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getEmployeesPreview executed successfully in 15 ms
+2025-05-14 10:09:43 [http-nio-8081-exec-9] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getAllEmployeesFiltered executed successfully in 23 ms
+2025-05-14 10:09:43 [http-nio-8081-exec-9] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getAllEmployees executed successfully in 24 ms
+2025-05-14 10:09:48 [http-nio-8081-exec-10] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 6 ms
+2025-05-14 10:09:48 [http-nio-8081-exec-10] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 8 ms
+2025-05-14 10:09:48 [http-nio-8081-exec-2] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getAllEmployeesFiltered executed successfully in 8 ms
+2025-05-14 10:09:48 [http-nio-8081-exec-2] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getAllEmployees executed successfully in 8 ms
+2025-05-14 10:10:22 [http-nio-8081-exec-4] ERROR c.t.u.aspect.ExceptionHandlingAspect - Exception in com.taskflow.userservice.service.AuthService::loginUserByEmail: Invalid email or password
+2025-05-14 10:10:22 [http-nio-8081-exec-4] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.AuthController::login executed successfully in 10 ms
+2025-05-14 10:10:26 [http-nio-8081-exec-5] ERROR c.t.u.aspect.ExceptionHandlingAspect - Exception in com.taskflow.userservice.service.AuthService::loginUserByEmail: Invalid email or password
+2025-05-14 10:10:26 [http-nio-8081-exec-5] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.AuthController::login executed successfully in 8 ms
+2025-05-14 10:10:52 [http-nio-8081-exec-7] ERROR c.t.u.aspect.ExceptionHandlingAspect - Exception in com.taskflow.userservice.service.AuthService::loginUserByEmail: Invalid email or password
+2025-05-14 10:10:52 [http-nio-8081-exec-7] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.AuthController::login executed successfully in 8 ms
+2025-05-14 10:12:03 [http-nio-8081-exec-10] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.AuthService::loginUserByEmail executed successfully in 365 ms
+2025-05-14 10:12:03 [http-nio-8081-exec-10] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.AuthController::login executed successfully in 367 ms
+2025-05-14 10:12:03 [http-nio-8081-exec-2] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 12 ms
+2025-05-14 10:12:03 [http-nio-8081-exec-2] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 15 ms
+2025-05-14 10:12:03 [http-nio-8081-exec-3] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getRecentEmployees executed successfully in 24 ms
+2025-05-14 10:12:03 [http-nio-8081-exec-3] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getEmployeesPreview executed successfully in 31 ms
+2025-05-14 10:12:03 [http-nio-8081-exec-4] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getAllEmployeesFiltered executed successfully in 10 ms
+2025-05-14 10:12:03 [http-nio-8081-exec-4] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getAllEmployees executed successfully in 10 ms
+2025-05-14 10:13:01 [http-nio-8081-exec-6] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.AuthService::loginUserByEmail executed successfully in 361 ms
+2025-05-14 10:13:01 [http-nio-8081-exec-6] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.AuthController::login executed successfully in 362 ms
+2025-05-14 10:13:01 [http-nio-8081-exec-8] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 18 ms
+2025-05-14 10:13:01 [http-nio-8081-exec-8] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 18 ms
+2025-05-14 10:13:01 [http-nio-8081-exec-1] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getRecentEmployees executed successfully in 25 ms
+2025-05-14 10:13:01 [http-nio-8081-exec-1] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getEmployeesPreview executed successfully in 49 ms
+2025-05-14 10:13:01 [http-nio-8081-exec-7] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getAllEmployeesFiltered executed successfully in 15 ms
+2025-05-14 10:13:01 [http-nio-8081-exec-7] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getAllEmployees executed successfully in 16 ms
+2025-05-14 10:17:50 [http-nio-8081-exec-3] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.AuthService::loginUserByEmail executed successfully in 416 ms
+2025-05-14 10:17:50 [http-nio-8081-exec-3] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.AuthController::login executed successfully in 419 ms
+2025-05-14 10:17:50 [http-nio-8081-exec-4] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 6 ms
+2025-05-14 10:17:50 [http-nio-8081-exec-4] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 7 ms
+2025-05-14 10:17:50 [http-nio-8081-exec-5] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getRecentEmployees executed successfully in 10 ms
+2025-05-14 10:17:50 [http-nio-8081-exec-5] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getEmployeesPreview executed successfully in 12 ms
+2025-05-14 10:17:52 [http-nio-8081-exec-6] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getAllEmployeesFiltered executed successfully in 10 ms
+2025-05-14 10:17:52 [http-nio-8081-exec-6] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getAllEmployees executed successfully in 11 ms
+2025-05-14 10:17:52 [http-nio-8081-exec-8] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 6 ms
+2025-05-14 10:17:53 [http-nio-8081-exec-8] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 7 ms
+2025-05-14 10:17:53 [http-nio-8081-exec-1] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getAllEmployeesFiltered executed successfully in 9 ms
+2025-05-14 10:17:53 [http-nio-8081-exec-1] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getAllEmployees executed successfully in 11 ms
+2025-05-14 10:18:56 [http-nio-8081-exec-9] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getUserByUsername executed successfully in 4 ms
+2025-05-14 10:18:56 [http-nio-8081-exec-9] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getUserProfile executed successfully in 5 ms
+2025-05-14 10:18:56 [http-nio-8081-exec-2] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.service.UserService::getAllEmployeesFiltered executed successfully in 7 ms
+2025-05-14 10:18:56 [http-nio-8081-exec-2] INFO  c.t.userservice.aspect.LoggingAspect - Method com.taskflow.userservice.controller.UserController::getAllEmployees executed successfully in 8 ms
+2025-05-14 11:38:08 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h19m31s660ms555µs400ns).
+2025-05-14 21:01:35 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9h23m32s252ms414µs600ns).
+2025-05-14 21:02:49 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-14 21:02:49 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-14 21:02:49 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
