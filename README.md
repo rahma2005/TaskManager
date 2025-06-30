@@ -16,7 +16,7 @@ A comprehensive task management system built with Spring Boot microservices back
 
 - Frontend: HTML, CSS, JavaScript
 - Backend: Java Spring Boot
-- Database: (To be specified)
+- Database: MySQL
 - Build Tool: Maven
 
 ## Project Structure
@@ -223,14 +223,10 @@ classDiagram
    ```
 3. Open the frontend files in your preferred web browser
 
-## Contributing
+## Screenshots
+![image](https://github.com/user-attachments/assets/631a4233-07a2-47bb-bf79-67068e964d67)
 
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a new Pull Request
+![image](https://github.com/user-attachments/assets/f608f4d5-8f2c-4e1d-b3b0-b2ef0318bc13)
 
-## License
+![image](https://github.com/user-attachments/assets/7cb2a78a-d029-47b6-b4fc-bbb5001d3191)
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
